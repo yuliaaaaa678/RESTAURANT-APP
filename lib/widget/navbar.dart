@@ -12,7 +12,8 @@ class Navbar extends StatelessWidget {
       color: Colors.transparent,
       elevation: 10,
       child: Container(
-        height: 30.0,
+        height: 34.0,
+        width: 15,
         decoration: const BoxDecoration(
           color: Colors.teal,
           borderRadius: BorderRadius.only(
@@ -21,13 +22,13 @@ class Navbar extends StatelessWidget {
           ),
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SizedBox(
               height: 30.0,
               width: MediaQuery.of(context).size.width / 2 - 40.0,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   Icon(
                     Icons.home,
@@ -35,19 +36,10 @@ class Navbar extends StatelessWidget {
                   ),
                   Icon(
                     Icons.search,
-                    color: Color.fromARGB(255, 240, 245, 239),
+                    color: Color.fromARGB(255, 248, 232, 90),
                   ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 30.0,
-              width: MediaQuery.of(context).size.width / 2 - 40.0,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
                   Icon(
-                    Icons.shopping_cart,
+                    Icons.history,
                     color: Color.fromARGB(255, 240, 245, 239),
                   ),
                   Icon(

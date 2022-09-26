@@ -37,7 +37,10 @@ class RestaurantDetailPage extends StatelessWidget {
                   ),
                   Text(
                     "city : ${restaurant.city}",
-                    style: const TextStyle(fontSize: 16),
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Text(
                     "rating : ${restaurant.rating}",
@@ -46,6 +49,43 @@ class RestaurantDetailPage extends StatelessWidget {
                   Text(
                     "description : ${restaurant.description}",
                     style: const TextStyle(fontSize: 16),
+                  ),
+                  Text(
+                    "Menu : ${restaurant.name}",
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: restaurant.menus.drinks.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Card(
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                        ),
+                        child: Text(
+                          restaurant.menus.drinks[index].name,
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                      );
+                    },
+                  ),
+                  ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: restaurant.menus.foods.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Card(
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                        ),
+                        child: Text(
+                          restaurant.menus.foods[index].name,
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
