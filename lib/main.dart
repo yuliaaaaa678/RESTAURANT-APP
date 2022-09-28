@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:aplikasirestaurant/widget/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasirestaurant/restaurant.dart';
